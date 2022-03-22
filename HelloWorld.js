@@ -22,4 +22,4 @@ pertanyaan.question('Berapa banyak jumlah tiket yang dibeli: ', (tiket) => {
             pertanyaan.close();
         });
     });
-});
+}); 
