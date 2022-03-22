@@ -17,7 +17,7 @@ pertanyaan.question('Berapa banyak jumlah tiket yang dibeli: ', (tiket) => {
     pertanyaan.question('Dimanakah kota anda saat ini: ', (alamat) => {
         pertanyaan.question('Masukkan kota tujuan anda pergi: ', (tujuan) => {
             console.log();
-            console.log(`Selamat datang ${nama}, jumlah tiket yang ada beli sebanyak ${tiket} tiket.`);
+            console.log(`Selamat datang ${nama}, jumlah tiket yang anda beli sebanyak ${tiket} tiket.`);
             console.log(`Anda saat ini berada di ${alamat}, dan berangkat pergi menuju kota ${tujuan}, selamat jalan !!!!`);
             pertanyaan.close();
         });
