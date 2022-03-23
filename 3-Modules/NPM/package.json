@@ -1,0 +1,16 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "Learn NPM",
+  "main": "index.js",
+  "scripts": {
+    "start": "node Tugas/app",
+    "fol": "ls",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Boby Maulana Subagja",
+  "license": "ISC",
+  "dependencies": {
+    "validator": "^13.5.2"
+  }
+}
