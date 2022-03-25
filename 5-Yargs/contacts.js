@@ -26,11 +26,17 @@ const saveContact = (name, email,mobile) => {
         return false;
     }
 
-    // Melakukan validasi email
-    if(email != "" && !validator.isEmail(email)) {
-        console.log('Email yang anda masukan salah');
-        return false;
-    }
+    // // Melakukan validasi email
+    // if(email != "" && !validator.isEmail(email)) {
+    //     console.log('Email yang anda masukan salah');
+    //     return false;
+    // }
+        if(email) {
+            if(!validator.isEmail(email)) {
+            console.log('Email yang anda masukan salah');
+            return false;
+            }
+        }
 
     // Melakukan validasi cek mobile number apabila terjadi duplicate
     if(!validator.isMobilePhone(mobile)) {
