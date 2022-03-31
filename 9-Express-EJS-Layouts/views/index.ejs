@@ -1,0 +1,18 @@
+<!-- Content -->
+      <H1> This is home page</H1> <br>
+      <center>
+      <h2><p>Hello and Welcome <%= identity.name %> </p> </h2>
+      <h3><%= identity.judul %> </h3>
+      </center>    
+      <h4>Contact List</h4>
+        <% if (cont.length < 1 ) { %> <!-- Terdapat hanya 3 data array, maka hasilnya akan empty -->
+         <p>Contact is empty</p>
+        <% } else { %>
+      <ul>
+        <% cont.forEach((cont) => { %>
+          <li>Name: <%= cont.name %> </li>
+          <li>Email: <%= cont.email %> </li>
+          <br>
+        <% })}; %>   
+      </ul>
+    
