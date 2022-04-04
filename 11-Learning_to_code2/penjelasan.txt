@@ -1,0 +1,27 @@
+===> Penjelasan tugas NPM Morgan <===
+
+Morgan merupakan sebuah middleware yang digunakan pada express dan node js yang berfungsi mencatat setiap request http yang terjadi 
+pada server setiap kali dijalankan.
+
+Pada file app.js, saya menggunakan morgan dengan menggunakan option dev, pada dev setiap status data token akan memiliki warna dari 
+hasil keluaran dari nilai yang ditampilkan pada console. Setiap warna memiliki fungsi yang berbeda - beda, berikut penjelasannya:
+
+- Hijau  : Status token bekerja dengan baik pada sebuah kode.
+- Merah  : Status tidak bekerja dengan baik atau error pada server.
+- Kuning : Status pada bagian client tidak bekerja dengan baik atau error.
+- Cyan   : Status yang digunakan saat mengalihkan sebuah kode.
+- Tidak berwarna : Suatu informasi yang diberikan pada kode.
+
+Berikut proses yang terjadi ketika saya membuka halaman root atau index dan hasil output yang ditampilkan pada morgan melalui console:
+
+Time: 1648794194831
+GET / 304 85.977 ms - -
+GET /css/style.css 304 4.629 ms - -
+
+Time  : Merupakan middleware yang berguna untuk menghitung setiap detik yang telah di eksekusi secara langsung dari tanggal saat ini.
+GET / : Request method untuk mengambil data yang ada pada code root atau index dan ditampilkan pada sebuah server.
+GET /css/style.css : Request method untuk mengambil data yang ada pada code style.css
+304   : Status code yang terjadi pada network, 304 artinya tidak dirubah maka tidak mengembalikan isi halaman.
+404   : Status code yang terjadi ketika halaman yang diakses tidak ada pada server.
+85.977 ms : Waktu sebuah respons yang diterima ketika membuka halaman root, yaitu 85.977 dengan satuan ms(milisecond)
+- -   : - pertama hanya sebuah text, dan - kedua panjang konten.
