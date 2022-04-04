@@ -5,6 +5,14 @@ body {
   background-color: #fefbd8;
 }
 
+.text{
+  margin-left: 3%;
+}
+
+.container {
+  margin-right: 5%;
+}
+
 .topnav {
   position: relative;
   background-color: #333;
