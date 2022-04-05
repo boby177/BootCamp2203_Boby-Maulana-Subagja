@@ -1,0 +1,37 @@
+<!-- Content -->
+<div class="text">
+<center> <H1> This is home page</H1> <br> </center>   
+      <h2><p>Hello and Welcome <%= identity.name %> </p> </h2>
+      <h3><%= identity.judul %> </h3>
+    </div>
+      <br>      
+      <div class="container">
+      <table class="table table-striped table-dark">        
+        <thead>
+          <center><h3>Contact List</h3></center>
+        <% if (contacts.length < 1 ) { %> <!-- Terdapat hanya 3 data array, maka hasilnya akan empty -->
+         <p>Contact is empty</p>
+        <% } else { %>
+          <tr>
+            <th scope="col"> No </th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Action</th>
+            <!-- <th scope="col">Mobile</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- <th scope="row">1</th> -->
+            <% contacts.forEach((contacts, i) => { i++ %>
+              <td><%= i %></td>
+            <td><%= contacts.name %></td>
+            <td> <%= contacts.email %></td>
+            <td> <a href="/detail/<%= contacts.name %>" button type= button class="btn btn-outline-success">Details</a></td>
+            <br>
+          </tr>
+          <% })}; %>
+        </tbody>
+      </div>
+      </table>
+    
