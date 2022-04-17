@@ -1,0 +1,45 @@
+<div class="container">
+    <br>
+    <h2> Add new discussion </h2>
+    <br>
+  <form method="post" action="/discussion">
+      <input type="hidden" name="id" value="">
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationDefault01">Title</label>
+        <input type="text" class="form-control" id="validationDefault01" name="title" required>
+      </div>
+    </div>
+    <div class="form-group col-md-4 mb-3">
+        <label for="exampleFormControlSelect1">Select Main Forum</label>
+        <select class="form-control form-control-sm" id="exampleFormControlSelect1" name="forum">
+            <% forum.forEach((forum, i) => { i++ %> 
+          <option><%= forum.name_forum %> </option>
+          <% }); %>
+        </select>
+      </div>
+    <div class="form-group col-md-4 mb-3">
+        <label for="exampleFormControlSelect1">Select Sub Forum</label>
+        <select class="form-control form-control-sm" id="exampleFormControlSelect1" name="sub_forum">
+            <% subForum.forEach((subForum, i) => { i++ %> 
+          <option><%= subForum.name_sub_forum %> </option>
+          <% }); %>
+        </select>
+      </div>
+    <div class="form-row">
+            <label for="validationDefault01">Description</label>
+            <textarea name="description" rows="10" cols="70">  
+            </textarea>
+    </div>
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Input Image</label>
+          <input type="file" name="img[]" class="file" accept="image/*">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Date Time</label>
+          <input type="datetime-local" name="date">
+        </div>
+    <br>
+    <button class="btn btn-dark" type="submit"> Submit</button>
+  </form>
+  </div>

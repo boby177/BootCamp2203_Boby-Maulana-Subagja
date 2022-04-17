@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>List comments</h2>
+    <div class="button_post">
+        <a href="/add_comment" button type="button" class="btn btn-outline-dark btn-lg">Add new comment</a>
+      </div>
+      <div class="card text-white bg-dark mb-1" style="max-width: 100rem;">
+        <% comments.forEach(comments => { %>
+        <div class="card-header">Comment from foramus</div>
+        <div class="card-body">
+            <p class="card-title"><%= comments.desc_comment %></p>
+          <small class="card-text"><%= comments.date_comment %></small>
+          <div class="button_post">
+              <a href="/comment/update/<%= comments.id_comment %>" button type="button" class="btn btn-outline-light btn-lg">Edit comment</a>
+          </div>
+          <div class="button_post">
+              <a href="/delete_comment/<%= comments.id_comment %>" button type="button" class="btn btn-outline-danger btn-lg">Delete comment</a>
+          </div>
+
+          <br>
+          <% }); %>
+        </div>
+</div>

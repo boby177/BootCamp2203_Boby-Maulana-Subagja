@@ -1,0 +1,23 @@
+<div class="ads-left">
+  <img src="../img/others/ads5.png" alt="">
+
+</div>
+<div class="container">
+    <h2>
+        List All Foramu Main Forum
+    </h2>
+    <div class="card mb-5">
+        <div class="card-body">
+          <% forum.forEach(forum => { %> 
+            <!-- <div class="card-header">           -->
+          <h5 class="card-title"> <%= forum.name_forum %>  </h5>
+          <!-- </div> -->
+          <p class="card-text"> <%= forum.desc_forum %> </p>
+          <a href="/sub_forum" class="btn btn-outline-dark">Let's Go</a><br>
+          <p class="card-text"><small class="text-muted"> <%= forum.date_forum %> </small></p>
+          <span class="d-block p-2 bg-dark"></span>
+          <% }); %>
+          <hr>
+        </div>
+        <img src="../img/others/ads1.png" alt="">
+      </div>
