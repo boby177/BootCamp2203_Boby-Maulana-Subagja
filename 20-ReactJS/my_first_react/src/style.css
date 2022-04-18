@@ -1,0 +1,16 @@
+.nav {
+    float: right;
+    margin-right: 20px;
+    margin-top: 10;
+}
+
+li {
+    float: left;
+    list-style: none;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.text {
+    font-size: 1vw;
+}
