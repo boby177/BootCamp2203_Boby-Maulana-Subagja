@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>
+        List All Foramu Discussion
+    </h2>
+    <div class="button_post">
+        <a href="/add_discussion" class="btn btn-outline-primary btn-lg">Create Discussion</a>
+
+    </div>
+        <div class="card text-center">
+            <% discussions.forEach(discussions => { %> 
+            <h5 class="card-header"><%= discussions.title_post %></h5>
+            <div class="card-body">
+              <!-- <h5 class="card-title">Special title treatment</h5> -->
+              <p class="card-title"><%= discussions.desc_post %></p>
+              <a href="/detail_discussion/<%= discussions.id_post %> " class="btn btn-outline-dark">More Detail</a>
+              <a href="/delete_discussion/<%= discussions.id_post %>" class="btn btn-outline-danger">Delete</a>
+              <p class="card-text"><small class="text-muted"> Created by: <%= discussions.name %> | <%= discussions.date_post %> </small></p>
+          <% }); %>
+            </div>
+          </div>
+        <img src="../img/others/ads2.jpg" alt="">
+</div>

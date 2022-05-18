@@ -1,0 +1,14 @@
+<div class="container">
+    <br>
+    <h2> Update comment </h2>
+    <br>
+  <form method="post" action="/comment/update">
+    <div class="form-row">
+            <label for="validationDefault01">Your comment</label>
+            <textarea name="comment" value = "<%= comments.desc_comment %> " rows="10" cols="70">  
+            </textarea>
+    </div>
+    <br>
+    <button class="btn btn-dark" type="submit"> Submit</button>
+  </form>
+  </div>
